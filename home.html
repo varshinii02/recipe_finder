@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recipe Finder</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body ng-app="recipeApp" ng-controller="RecipeController">
+<!-- Navigation Bar -->
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+</nav>
+<div id="results">
+<h2>Recipe Finder</h2>
+<p style="text-align: center;">Enter ingredients separated by commas in the text box below:</p>
+<form ng-submit="searchRecipes()">
+<input type="text" ng-model="searchQuery" placeholder="E.g., chicken, broccoli, garlic"
+required>
+<button type="submit">Search</button>
+</form>
+<div ng-show="loading">Loading...</div>
+<!-- Display number of results -->
+<div ng-show="!loading && recipes.length > 0">
+<p style="text-align: center;">{{ recipes.length }} results found</p>
+</div>
+<div ng-show="error" style="color: red;">{{error}}</div>
+<div class="recipe" ng-repeat="recipe in recipes">
+<img ng-src="{{recipe.image}}" alt="Recipe Image">
+<h3>{{recipe.title}}</h3>
+</div>
+</div>
+<footer style="text-align:center;">
+<p>Copyright 2023 | By <a href="home.html">Recipe Finder</a></p>
+</footer>
+</body>
+</html>

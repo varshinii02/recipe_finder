@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   }
+   #results {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+   }
+   h2 {
+    text-align: center;
+    margin-bottom: 20px;
+   }
+   form {
+    margin-bottom: 20px;
+    text-align: center; /* Center the form */
+   }
+   input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+   }
+   button[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+   }
+   button[type="submit"]:hover {
+    background-color: #45a049;
+}
+.recipe {
+ margin-bottom: 20px;
+}
+.recipe img {
+ width: 100%;
+ max-width: 300px;
+ height: auto;
+ display: block;
+ margin: 0 auto;
+}
+.recipe h3 {
+ text-align: center;
+}
+/* Navigation bar styles */
+nav {
+ background-color: #333;
+ overflow: hidden;
+}
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+}
+nav ul li {
+ float: left;
+}
+nav ul li a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+nav ul li a:hover {
+ background-color: #111;
+}
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+ nav ul {
+ display: flex;
+ flex-direction: column;
+ }
+ nav ul li {
+ float: none;
+ text-align: center;
+ }
+}
